@@ -10,11 +10,11 @@ function init(): void {
     })
 }
 
-function insert(sql: string, params: any): void {
+async function insert(sql: string, params: Array<any>): Promise<void> {
     db.prepare(sql).run(params);
 }
 
-function query(sql: string): Promise<BobolympicsScore[]> {
+async function query(sql: string): Promise<BobolympicsScore[]> {
     return new Promise((resolve, reject) => {
         db.all(sql, (err, rows) => {
             resolve(rows);

@@ -6,9 +6,10 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
-    "outDir": "build"
+    "outDir": "dist"
   },
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "include": ["src/**/*"]
 }
